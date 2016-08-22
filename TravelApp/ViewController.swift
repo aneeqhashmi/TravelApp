@@ -14,7 +14,7 @@ class ViewController: UIViewController,FBSDKLoginButtonDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-
+        
         let loginButton = FBSDKLoginButton()
         // Optional: Place the button in the center of your view.
         loginButton.center = self.view.center
@@ -39,9 +39,9 @@ class ViewController: UIViewController,FBSDKLoginButtonDelegate {
         {
             NSLog("Permission accepted")
             
-            UserManager.loginWithFacebook(result.token.tokenString, success: { (user:AnyObject) in
-                    let kUser = user as! KCSUser
-                    NSLog("Username: %@", kUser.username)
+            UserManager.loginWithFacebook(result.token.tokenString, success: { (objUser:AnyObject) in
+                    let user = objUser as! User
+                    NSLog("Username: %@", user.username)
                 
                 }, failure: { (error:NSError) in
                     

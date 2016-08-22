@@ -16,13 +16,14 @@ class KUserDAL: UserDAL {
             KCSUserSocialIdentifyProvider.SocialIDFacebook,
             accessDictionary: [ KCSUserAccessTokenKey : token],
             withCompletionBlock:
-            { (user: KCSUser!, errorOrNil: NSError!, result: KCSUserActionResult) -> Void in
+            { (kUser: KCSUser!, errorOrNil: NSError!, result: KCSUserActionResult) -> Void in
                 if errorOrNil != nil {
                     //handle error
                     failure(errorOrNil)
                 }
                 else
                 {
+                    let user = User(kUser: kUser)
                     success(user)
                 }
             }

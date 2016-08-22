@@ -14,7 +14,7 @@ enum DAL:Int {
     case None = 1
 }
 
-let MBaaS:DAL = DAL.None
+let MBaaS:DAL = DAL.Kinvey
 
 enum StoryBoard: String {
     case Main = "Main"

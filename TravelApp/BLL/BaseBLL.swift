@@ -10,7 +10,5 @@ import Foundation
 
 class BaseBLL: NSObject {
     
-    func commonFunc() -> () {
-        
-    }
+    
 }

@@ -8,17 +8,18 @@
 
 import Foundation
 
-class UserDAL: NSObject {
+class UserDAL:NSObject {
     
-    static func UserDALFactory()->UserDAL
+    static func factory()->UserDAL
     {
         var userDAL:UserDAL? = nil
         
         switch MBaaS {
+        
             case DAL.Kinvey:
                 userDAL = KUserDAL()
                 break
-            
+                
             default:
                 assert(false,"Given MBaaS is not implemented")
                 break
@@ -29,6 +30,7 @@ class UserDAL: NSObject {
     
     func loginWithFacebook(token:String,success:Closures.successClosure, failure:Closures.failureClosureWithError)
     {
-        preconditionFailure("This method must be overridden") 
+        preconditionFailure("This method must be overridden")
     }
 }
+

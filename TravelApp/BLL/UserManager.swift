@@ -12,8 +12,7 @@ class UserManager: BaseBLL {
     
     static func loginWithFacebook(token:String, success:Closures.successClosure, failure:Closures.failureClosureWithError) -> Void {
         
-        let userDAL = UserDAL.UserDALFactory()
-        
-        userDAL.loginWithFacebook(token, success: success, failure: failure)
+        let objDAL = UserDAL.factory()
+        objDAL.loginWithFacebook(token, success: success, failure: failure)
     }
 }
