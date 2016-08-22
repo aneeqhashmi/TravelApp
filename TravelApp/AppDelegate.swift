@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        KCSClient.sharedClient().initializeKinveyServiceForAppKey("kid_HJOu2jh_", withAppSecret: "e52e4248e8294faea2dbc1d9be609350", usingOptions: nil)
+        KCSClient.sharedClient().initializeKinveyServiceForAppKey(Kinvey.appKey, withAppSecret: Kinvey.appSecret, usingOptions: nil)
         
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         

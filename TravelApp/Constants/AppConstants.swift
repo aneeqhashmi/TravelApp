@@ -21,6 +21,11 @@ enum StoryBoard: String {
     
 }
 
+struct Kinvey {
+    static let appKey = "kid_HJOu2jh_"
+    static let appSecret = "e52e4248e8294faea2dbc1d9be609350"
+}
+
 struct Closures {
     typealias basicClosure = () -> Void
     typealias successClosure = (AnyObject) -> Void
