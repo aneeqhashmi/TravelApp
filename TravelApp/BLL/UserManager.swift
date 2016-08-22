@@ -15,4 +15,10 @@ class UserManager: BaseBLL {
         let objDAL = UserDAL.factory()
         objDAL.loginWithFacebook(token, success: success, failure: failure)
     }
+    
+    static func getActiveUser()->User?
+    {
+        let objDAL = UserDAL.factory()
+        return objDAL.getActiveUser()
+    }
 }

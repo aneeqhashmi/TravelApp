@@ -11,32 +11,20 @@ import UIKit
 
 class AppSession
 {
-//    private func initialize() -> AppSession
-//    {
-//        if let activeUser = KCSUser.activeUser()
-//        {
-//            user = activeUser;
-//        }
-//        
-//        return self;
-//    }
-    
     private init()
     {
-        if let activeUser = KCSUser.activeUser()
+        user = UserManager.getActiveUser()
+        if(user != nil)
         {
-            user = activeUser;
+            NSLog("username: %@",user!.username)
         }
+        
     }
     
     static let sharedInstance =  AppSession()
 
-    var user:KCSUser?
+    var user:User?
     
-    func setActiveUserInSession()
-    {
-        self.user = KCSUser.activeUser()
-    }
     
     func clear()
     {

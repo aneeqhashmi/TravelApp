@@ -29,4 +29,15 @@ class KUserDAL: UserDAL {
             }
         )
     }
+    
+    override func getActiveUser()->User?
+    {
+        var user:User? = nil
+        if let activeUser = KCSUser.activeUser()
+        {
+            user = User(kUser: activeUser)
+        }
+        
+        return user
+    }
 }

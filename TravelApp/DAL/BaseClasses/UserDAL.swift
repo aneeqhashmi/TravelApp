@@ -32,5 +32,10 @@ class UserDAL:NSObject {
     {
         preconditionFailure("This method must be overridden")
     }
+    
+    func getActiveUser()->User?
+    {
+        preconditionFailure("This method must be overridden")
+    }
 }
 
