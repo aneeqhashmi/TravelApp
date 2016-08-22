@@ -6,6 +6,9 @@
 target 'TravelApp' do
 
 pod 'Alamofire'
+pod 'FBSDKCoreKit'
+pod 'FBSDKShareKit'
+pod 'FBSDKLoginKit'
 
 
 end

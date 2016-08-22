@@ -85,7 +85,15 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-TravelApp/Alamofire.framework"
+  install_framework "Pods-TravelApp/Bolts.framework"
+  install_framework "Pods-TravelApp/FBSDKCoreKit.framework"
+  install_framework "Pods-TravelApp/FBSDKLoginKit.framework"
+  install_framework "Pods-TravelApp/FBSDKShareKit.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-TravelApp/Alamofire.framework"
+  install_framework "Pods-TravelApp/Bolts.framework"
+  install_framework "Pods-TravelApp/FBSDKCoreKit.framework"
+  install_framework "Pods-TravelApp/FBSDKLoginKit.framework"
+  install_framework "Pods-TravelApp/FBSDKShareKit.framework"
 fi

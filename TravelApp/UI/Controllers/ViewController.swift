@@ -19,7 +19,7 @@ class ViewController: UIViewController,FBSDKLoginButtonDelegate {
         // Optional: Place the button in the center of your view.
         loginButton.center = self.view.center
         loginButton.delegate = self
-        loginButton.readPermissions = ["public_profile","user_friends"]
+        loginButton.readPermissions = ["public_profile","user_friends","email"]
         self.view.addSubview(loginButton)
     }
 
@@ -34,7 +34,7 @@ class ViewController: UIViewController,FBSDKLoginButtonDelegate {
 
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
         
-        if(result.token != nil)
+        if(result.token != nil && result.declinedPermissions.count == 0)
         {
             NSLog("Permission accepted")
             
@@ -53,6 +53,8 @@ class ViewController: UIViewController,FBSDKLoginButtonDelegate {
         else
         {
             NSLog("Permission denied")
+            let loginManager:FBSDKLoginManager = FBSDKLoginManager()
+            loginManager.logOut()
 
         }
     }

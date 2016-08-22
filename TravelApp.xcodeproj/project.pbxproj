@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1527802F188573FBBE808FA6 /* Pods_TravelApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C35E431938DB968FC939583B /* Pods_TravelApp.framework */; };
-		B225D0791D5C8FBB0050A427 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B225D0761D5C8FBB0050A427 /* FBSDKCoreKit.framework */; };
-		B225D07A1D5C8FBB0050A427 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B225D0771D5C8FBB0050A427 /* FBSDKLoginKit.framework */; };
-		B225D07B1D5C8FBB0050A427 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B225D0781D5C8FBB0050A427 /* FBSDKShareKit.framework */; };
 		B225D07D1D634FF50050A427 /* KinveyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B225D07C1D634FF50050A427 /* KinveyKit.framework */; };
 		B225D0811D63502C0050A427 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B225D07E1D63502C0050A427 /* Accounts.framework */; };
 		B225D0821D63502C0050A427 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B225D07F1D63502C0050A427 /* CoreGraphics.framework */; };
@@ -43,9 +40,6 @@
 
 /* Begin PBXFileReference section */
 		A5B7624177D8D26ED9F8DE7B /* Pods-TravelApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TravelApp/Pods-TravelApp.debug.xcconfig"; sourceTree = "<group>"; };
-		B225D0761D5C8FBB0050A427 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../../FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
-		B225D0771D5C8FBB0050A427 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../../FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
-		B225D0781D5C8FBB0050A427 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../../../FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
 		B225D07C1D634FF50050A427 /* KinveyKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KinveyKit.framework; sourceTree = "<group>"; };
 		B225D07E1D63502C0050A427 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		B225D07F1D63502C0050A427 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -97,11 +91,8 @@
 				B225D0811D63502C0050A427 /* Accounts.framework in Frameworks */,
 				B225D0821D63502C0050A427 /* CoreGraphics.framework in Frameworks */,
 				B225D0831D63502C0050A427 /* CoreLocation.framework in Frameworks */,
-				B225D07B1D5C8FBB0050A427 /* FBSDKShareKit.framework in Frameworks */,
 				1527802F188573FBBE808FA6 /* Pods_TravelApp.framework in Frameworks */,
 				B225D07D1D634FF50050A427 /* KinveyKit.framework in Frameworks */,
-				B225D0791D5C8FBB0050A427 /* FBSDKCoreKit.framework in Frameworks */,
-				B225D07A1D5C8FBB0050A427 /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,9 +237,6 @@
 				B225D07F1D63502C0050A427 /* CoreGraphics.framework */,
 				B225D0801D63502C0050A427 /* CoreLocation.framework */,
 				B225D07C1D634FF50050A427 /* KinveyKit.framework */,
-				B225D0761D5C8FBB0050A427 /* FBSDKCoreKit.framework */,
-				B225D0771D5C8FBB0050A427 /* FBSDKLoginKit.framework */,
-				B225D0781D5C8FBB0050A427 /* FBSDKShareKit.framework */,
 				C35E431938DB968FC939583B /* Pods_TravelApp.framework */,
 			);
 			name = Frameworks;
