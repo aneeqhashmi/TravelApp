@@ -13,7 +13,7 @@ class AppSession
 {
     private init()
     {
-        user = UserManager.getActiveUser()
+        user = UserManager().getActiveUser()
         if(user != nil)
         {
             NSLog("username: %@",user!.username)

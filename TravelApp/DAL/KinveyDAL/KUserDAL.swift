@@ -40,4 +40,12 @@ class KUserDAL: UserDAL {
         
         return user
     }
+    
+    override func logout() {
+        
+        if let user = KCSUser.activeUser()
+        {
+            user.logout()
+        }
+    }
 }

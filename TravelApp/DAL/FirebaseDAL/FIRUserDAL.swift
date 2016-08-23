@@ -16,8 +16,6 @@ class FIRUserDAL: UserDAL {
     
     override func loginWithFacebook(token:String,success:Closures.successClosure, failure:Closures.failureClosureWithError) {
         
-//        let ref = FIRDatabase.database().reference()
-        
         let credential = FIRFacebookAuthProvider.credentialWithAccessToken(token)
         FIRAuth.auth()?.signInWithCredential(credential) { (user, error) in
             // handle logged in user
@@ -39,12 +37,28 @@ class FIRUserDAL: UserDAL {
     
     override func getActiveUser()->User?
     {
+        //let ref = FIRDatabase.database().reference()
+        
         var user:User? = nil
-        if let activeUser = KCSUser.activeUser()
+        if let activeUser = FIRAuth.auth()?.currentUser
         {
-            user = User(kUser: activeUser)
+            user = User(fUser: activeUser)
         }
         
         return user
+    }
+    
+    override func logout() {
+        
+        if ((FIRAuth.auth()?.currentUser) != nil)
+        {
+            do{
+                try FIRAuth.auth()?.signOut()
+            }
+            catch
+            {
+                NSLog("Logout fails.")
+            }
+        }
     }
 }

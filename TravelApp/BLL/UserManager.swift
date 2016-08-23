@@ -10,15 +10,25 @@ import Foundation
 
 class UserManager: BaseBLL {
     
-    static func loginWithFacebook(token:String, success:Closures.successClosure, failure:Closures.failureClosureWithError) -> Void {
+    var objDAL:UserDAL!
+    
+    override init() {
+        super.init()
+        objDAL = UserDAL.factory()
+    }
+    
+    func loginWithFacebook(token:String, success:Closures.successClosure, failure:Closures.failureClosureWithError) -> Void {
         
-        let objDAL = UserDAL.factory()
         objDAL.loginWithFacebook(token, success: success, failure: failure)
     }
     
-    static func getActiveUser()->User?
+    func getActiveUser()->User?
     {
-        let objDAL = UserDAL.factory()
         return objDAL.getActiveUser()
+    }
+    
+    func logout()
+    {
+        objDAL.logout()
     }
 }

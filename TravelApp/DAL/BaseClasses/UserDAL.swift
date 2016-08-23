@@ -41,5 +41,10 @@ class UserDAL:NSObject {
     {
         preconditionFailure("This method must be overridden")
     }
+    
+    func logout()
+    {
+        preconditionFailure("This method must be overridden")
+    }
 }
 

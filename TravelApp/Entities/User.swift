@@ -16,6 +16,7 @@ class User: baseEntity {
     var username:String!
     var firstName:String?
     var lastName:String?
+    var fullname:String?
     var email:String?
     
     init(kUser:KCSUser)
@@ -33,7 +34,7 @@ class User: baseEntity {
         let uInfo:FIRUserInfo = fUser.providerData[0]
         userId = uInfo.uid
         username = fUser.uid
-        firstName = uInfo.displayName
+        fullname = uInfo.displayName
         email = uInfo.email
         
     }

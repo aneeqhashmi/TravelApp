@@ -170,8 +170,8 @@
 		B2E543601D68AB4B0067C1B0 /* DAL */ = {
 			isa = PBXGroup;
 			children = (
-				B2E543841D6C3AC00067C1B0 /* FirebaseDAL */,
 				B2E543711D6AF2730067C1B0 /* BaseClasses */,
+				B2E543841D6C3AC00067C1B0 /* FirebaseDAL */,
 				B2E543611D68AB4B0067C1B0 /* KinveyDAL */,
 			);
 			path = DAL;

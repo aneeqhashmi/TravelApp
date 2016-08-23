@@ -11,9 +11,13 @@ import FBSDKLoginKit
 
 class ViewController: UIViewController,FBSDKLoginButtonDelegate {
     
+    var userManager:UserManager!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        userManager = UserManager()
         
         let loginButton = FBSDKLoginButton()
         // Optional: Place the button in the center of your view.
@@ -21,6 +25,8 @@ class ViewController: UIViewController,FBSDKLoginButtonDelegate {
         loginButton.delegate = self
         loginButton.readPermissions = ["public_profile","user_friends","email"]
         self.view.addSubview(loginButton)
+        
+        AppSession.sharedInstance
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,6 +36,7 @@ class ViewController: UIViewController,FBSDKLoginButtonDelegate {
 
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
         NSLog("Logout")
+        userManager.logout()
     }
 
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
@@ -38,7 +45,7 @@ class ViewController: UIViewController,FBSDKLoginButtonDelegate {
         {
             NSLog("Permission accepted")
             
-            UserManager.loginWithFacebook(result.token.tokenString, success: { (objUser:AnyObject) in
+            userManager.loginWithFacebook(result.token.tokenString, success: { (objUser:AnyObject) in
                     let user = objUser as! User
                     NSLog("Username: %@", user.username)
                 
