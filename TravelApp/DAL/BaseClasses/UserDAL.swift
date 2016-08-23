@@ -19,7 +19,11 @@ class UserDAL:NSObject {
             case DAL.Kinvey:
                 userDAL = KUserDAL()
                 break
-                
+            
+            case DAL.Firebase:
+            userDAL = FIRUserDAL()
+            break
+            
             default:
                 assert(false,"Given MBaaS is not implemented")
                 break

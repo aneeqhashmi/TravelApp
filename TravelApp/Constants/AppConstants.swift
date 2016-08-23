@@ -11,10 +11,11 @@ import UIKit
 
 enum DAL:Int {
     case Kinvey = 0
-    case None = 1
+    case Firebase = 1
+    case None = 2
 }
 
-let MBaaS:DAL = DAL.Kinvey
+let MBaaS:DAL = DAL.Firebase
 
 enum StoryBoard: String {
     case Main = "Main"

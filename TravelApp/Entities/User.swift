@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import Firebase
+import FirebaseAuth
 
 class User: baseEntity {
     
@@ -23,6 +25,16 @@ class User: baseEntity {
         firstName = kUser.givenName
         lastName = kUser.surname
         email = kUser.email
+        
+    }
+    
+    init(fUser:FIRUser)
+    {
+        let uInfo:FIRUserInfo = fUser.providerData[0]
+        userId = uInfo.uid
+        username = fUser.uid
+        firstName = uInfo.displayName
+        email = uInfo.email
         
     }
 }

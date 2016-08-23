@@ -7,6 +7,7 @@
 //
 
 import FBSDKCoreKit
+import Firebase
 
 
 @UIApplicationMain
@@ -21,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
-        
+        FIRApp.configure()
         // Override point for customization after application launch.
         return true
     }

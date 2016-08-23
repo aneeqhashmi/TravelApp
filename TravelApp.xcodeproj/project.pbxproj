@@ -36,6 +36,8 @@
 		B2E543781D6B1A930067C1B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E543771D6B1A930067C1B0 /* ViewController.swift */; };
 		B2E5437F1D6B252D0067C1B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2E5437E1D6B252D0067C1B0 /* Main.storyboard */; };
 		B2E543811D6B25670067C1B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2E543801D6B25670067C1B0 /* LaunchScreen.storyboard */; };
+		B2E543831D6C34F90067C1B0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B2E543821D6C34F90067C1B0 /* GoogleService-Info.plist */; };
+		B2E543861D6C3AEE0067C1B0 /* FIRUserDAL.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E543851D6C3AEE0067C1B0 /* FIRUserDAL.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +73,8 @@
 		B2E543771D6B1A930067C1B0 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B2E5437E1D6B252D0067C1B0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B2E543801D6B25670067C1B0 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B2E543821D6C34F90067C1B0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B2E543851D6C3AEE0067C1B0 /* FIRUserDAL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FIRUserDAL.swift; sourceTree = "<group>"; };
 		B63F951E0F394E7F2E44E41B /* Pods-TravelApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-TravelApp/Pods-TravelApp.release.xcconfig"; sourceTree = "<group>"; };
 		C35E431938DB968FC939583B /* Pods_TravelApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TravelApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -129,6 +133,7 @@
 				B25EF9D31D52244000871084 /* AppDelegate.swift */,
 				B25EF9DA1D52244000871084 /* Assets.xcassets */,
 				B25EF9DF1D52244000871084 /* Info.plist */,
+				B2E543821D6C34F90067C1B0 /* GoogleService-Info.plist */,
 				B225D0941D6352B50050A427 /* TravelApp-Bridging-Header.h */,
 			);
 			path = TravelApp;
@@ -165,6 +170,7 @@
 		B2E543601D68AB4B0067C1B0 /* DAL */ = {
 			isa = PBXGroup;
 			children = (
+				B2E543841D6C3AC00067C1B0 /* FirebaseDAL */,
 				B2E543711D6AF2730067C1B0 /* BaseClasses */,
 				B2E543611D68AB4B0067C1B0 /* KinveyDAL */,
 			);
@@ -220,6 +226,14 @@
 				B2E5437E1D6B252D0067C1B0 /* Main.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		B2E543841D6C3AC00067C1B0 /* FirebaseDAL */ = {
+			isa = PBXGroup;
+			children = (
+				B2E543851D6C3AEE0067C1B0 /* FIRUserDAL.swift */,
+			);
+			path = FirebaseDAL;
 			sourceTree = "<group>";
 		};
 		D731BBBDE73BB36321D536FB /* Frameworks */ = {
@@ -313,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2E543811D6B25670067C1B0 /* LaunchScreen.storyboard in Resources */,
+				B2E543831D6C34F90067C1B0 /* GoogleService-Info.plist in Resources */,
 				B2E5437F1D6B252D0067C1B0 /* Main.storyboard in Resources */,
 				B25EF9DB1D52244000871084 /* Assets.xcassets in Resources */,
 			);
@@ -373,6 +388,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2E543861D6C3AEE0067C1B0 /* FIRUserDAL.swift in Sources */,
 				B2E543701D6ACB720067C1B0 /* User.swift in Sources */,
 				B2E543431D68A0F30067C1B0 /* ApiConstants.swift in Sources */,
 				B2E543461D68A0F30067C1B0 /* MessageConstants.swift in Sources */,
