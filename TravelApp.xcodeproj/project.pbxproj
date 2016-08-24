@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1527802F188573FBBE808FA6 /* Pods_TravelApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C35E431938DB968FC939583B /* Pods_TravelApp.framework */; };
+		B21D666E1D6DC88700370640 /* UserDALFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21D666C1D6DC88700370640 /* UserDALFactory.swift */; };
+		B21D66701D6DC8AE00370640 /* UserDAL.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21D666F1D6DC8AE00370640 /* UserDAL.swift */; };
 		B225D07D1D634FF50050A427 /* KinveyKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B225D07C1D634FF50050A427 /* KinveyKit.framework */; };
 		B225D0811D63502C0050A427 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B225D07E1D63502C0050A427 /* Accounts.framework */; };
 		B225D0821D63502C0050A427 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B225D07F1D63502C0050A427 /* CoreGraphics.framework */; };
@@ -32,7 +34,6 @@
 		B2E543681D68AD0A0067C1B0 /* KUserDAL.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E543671D68AD0A0067C1B0 /* KUserDAL.swift */; };
 		B2E5436E1D6ACB580067C1B0 /* BaseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E5436D1D6ACB580067C1B0 /* BaseEntity.swift */; };
 		B2E543701D6ACB720067C1B0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E5436F1D6ACB720067C1B0 /* User.swift */; };
-		B2E543731D6AF2730067C1B0 /* UserDAL.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E543721D6AF2730067C1B0 /* UserDAL.swift */; };
 		B2E543781D6B1A930067C1B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E543771D6B1A930067C1B0 /* ViewController.swift */; };
 		B2E5437F1D6B252D0067C1B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2E5437E1D6B252D0067C1B0 /* Main.storyboard */; };
 		B2E543811D6B25670067C1B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2E543801D6B25670067C1B0 /* LaunchScreen.storyboard */; };
@@ -42,6 +43,8 @@
 
 /* Begin PBXFileReference section */
 		A5B7624177D8D26ED9F8DE7B /* Pods-TravelApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TravelApp/Pods-TravelApp.debug.xcconfig"; sourceTree = "<group>"; };
+		B21D666C1D6DC88700370640 /* UserDALFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDALFactory.swift; sourceTree = "<group>"; };
+		B21D666F1D6DC8AE00370640 /* UserDAL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDAL.swift; sourceTree = "<group>"; };
 		B225D07C1D634FF50050A427 /* KinveyKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KinveyKit.framework; sourceTree = "<group>"; };
 		B225D07E1D63502C0050A427 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		B225D07F1D63502C0050A427 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -69,7 +72,6 @@
 		B2E543671D68AD0A0067C1B0 /* KUserDAL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KUserDAL.swift; sourceTree = "<group>"; };
 		B2E5436D1D6ACB580067C1B0 /* BaseEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseEntity.swift; sourceTree = "<group>"; };
 		B2E5436F1D6ACB720067C1B0 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		B2E543721D6AF2730067C1B0 /* UserDAL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDAL.swift; sourceTree = "<group>"; };
 		B2E543771D6B1A930067C1B0 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B2E5437E1D6B252D0067C1B0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B2E543801D6B25670067C1B0 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -103,6 +105,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B21D666B1D6DC88700370640 /* FactoryClasses */ = {
+			isa = PBXGroup;
+			children = (
+				B21D666C1D6DC88700370640 /* UserDALFactory.swift */,
+			);
+			path = FactoryClasses;
+			sourceTree = "<group>";
+		};
+		B21D666D1D6DC88700370640 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				B21D666F1D6DC8AE00370640 /* UserDAL.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		B25EF9C71D52244000871084 = {
 			isa = PBXGroup;
 			children = (
@@ -170,7 +188,8 @@
 		B2E543601D68AB4B0067C1B0 /* DAL */ = {
 			isa = PBXGroup;
 			children = (
-				B2E543711D6AF2730067C1B0 /* BaseClasses */,
+				B21D666B1D6DC88700370640 /* FactoryClasses */,
+				B21D666D1D6DC88700370640 /* Protocols */,
 				B2E543841D6C3AC00067C1B0 /* FirebaseDAL */,
 				B2E543611D68AB4B0067C1B0 /* KinveyDAL */,
 			);
@@ -192,14 +211,6 @@
 				B2E5436F1D6ACB720067C1B0 /* User.swift */,
 			);
 			path = Entities;
-			sourceTree = "<group>";
-		};
-		B2E543711D6AF2730067C1B0 /* BaseClasses */ = {
-			isa = PBXGroup;
-			children = (
-				B2E543721D6AF2730067C1B0 /* UserDAL.swift */,
-			);
-			path = BaseClasses;
 			sourceTree = "<group>";
 		};
 		B2E543741D6B1A3A0067C1B0 /* UI */ = {
@@ -393,14 +404,15 @@
 				B2E543431D68A0F30067C1B0 /* ApiConstants.swift in Sources */,
 				B2E543461D68A0F30067C1B0 /* MessageConstants.swift in Sources */,
 				B2E543441D68A0F30067C1B0 /* AppConstants.swift in Sources */,
+				B21D666E1D6DC88700370640 /* UserDALFactory.swift in Sources */,
 				B2E543481D68A0F30067C1B0 /* CommonHelper.swift in Sources */,
 				B2E5433C1D68A0F30067C1B0 /* BaseBLL.swift in Sources */,
 				B2E5436E1D6ACB580067C1B0 /* BaseEntity.swift in Sources */,
 				B2E543471D68A0F30067C1B0 /* AppSession.swift in Sources */,
 				B2E543781D6B1A930067C1B0 /* ViewController.swift in Sources */,
 				B2E5435F1D68AA3F0067C1B0 /* UserManager.swift in Sources */,
-				B2E543731D6AF2730067C1B0 /* UserDAL.swift in Sources */,
 				B2E543681D68AD0A0067C1B0 /* KUserDAL.swift in Sources */,
+				B21D66701D6DC8AE00370640 /* UserDAL.swift in Sources */,
 				B25EF9D41D52244000871084 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -501,7 +513,6 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Aneeq Hashmi (4345T725B8)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"~/Documents/FacebookSDK/**",
 					"$(PROJECT_DIR)",
 					"/Users/aneeq/Documents/Projects/TravelApp/TravelApp/**",
 				);
@@ -531,7 +542,6 @@
 				CLANG_ENABLE_MODULES = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"~/Documents/FacebookSDK/**",
 					"$(PROJECT_DIR)",
 					"/Users/aneeq/Documents/Projects/TravelApp/TravelApp/**",
 				);

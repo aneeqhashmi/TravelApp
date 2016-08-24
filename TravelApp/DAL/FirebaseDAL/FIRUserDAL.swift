@@ -14,7 +14,7 @@ import FirebaseAuth
 
 class FIRUserDAL: UserDAL {
     
-    override func loginWithFacebook(token:String,success:Closures.successClosure, failure:Closures.failureClosureWithError) {
+    func loginWithFacebook(token:String,success:Closures.successClosure, failure:Closures.failureClosureWithError) {
         
         let credential = FIRFacebookAuthProvider.credentialWithAccessToken(token)
         FIRAuth.auth()?.signInWithCredential(credential) { (user, error) in
@@ -35,7 +35,7 @@ class FIRUserDAL: UserDAL {
         
     }
     
-    override func getActiveUser()->User?
+    func getActiveUser()->User?
     {
         //let ref = FIRDatabase.database().reference()
         
@@ -48,7 +48,7 @@ class FIRUserDAL: UserDAL {
         return user
     }
     
-    override func logout() {
+    func logout() {
         
         if ((FIRAuth.auth()?.currentUser) != nil)
         {

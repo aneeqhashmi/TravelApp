@@ -10,7 +10,7 @@ import Foundation
 
 class KUserDAL: UserDAL {
     
-    override func loginWithFacebook(token:String,success:Closures.successClosure, failure:Closures.failureClosureWithError) {
+    func loginWithFacebook(token:String,success:Closures.successClosure, failure:Closures.failureClosureWithError) {
         
         KCSUser.loginWithSocialIdentity(
             KCSUserSocialIdentifyProvider.SocialIDFacebook,
@@ -30,7 +30,7 @@ class KUserDAL: UserDAL {
         )
     }
     
-    override func getActiveUser()->User?
+    func getActiveUser()->User?
     {
         var user:User? = nil
         if let activeUser = KCSUser.activeUser()
@@ -41,7 +41,7 @@ class KUserDAL: UserDAL {
         return user
     }
     
-    override func logout() {
+    func logout() {
         
         if let user = KCSUser.activeUser()
         {

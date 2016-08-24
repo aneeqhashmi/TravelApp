@@ -8,9 +8,9 @@
 
 import Foundation
 
-class UserDAL:NSObject {
+class UserDALFactory:NSObject {
     
-    static func factory()->UserDAL
+    static func createInstance()->UserDAL
     {
         var userDAL:UserDAL? = nil
         
@@ -21,7 +21,7 @@ class UserDAL:NSObject {
                 break
             
             case DAL.Firebase:
-            userDAL = FIRUserDAL()
+                userDAL = FIRUserDAL()
             break
             
             default:
@@ -32,19 +32,5 @@ class UserDAL:NSObject {
         return userDAL!
     }
     
-    func loginWithFacebook(token:String,success:Closures.successClosure, failure:Closures.failureClosureWithError)
-    {
-        preconditionFailure("This method must be overridden")
-    }
-    
-    func getActiveUser()->User?
-    {
-        preconditionFailure("This method must be overridden")
-    }
-    
-    func logout()
-    {
-        preconditionFailure("This method must be overridden")
-    }
 }
 

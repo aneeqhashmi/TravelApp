@@ -14,7 +14,7 @@ class UserManager: BaseBLL {
     
     override init() {
         super.init()
-        objDAL = UserDAL.factory()
+        objDAL = UserDALFactory.createInstance()
     }
     
     func loginWithFacebook(token:String, success:Closures.successClosure, failure:Closures.failureClosureWithError) -> Void {
